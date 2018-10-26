@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Klavye Olayları</title>
+<style>
+#kutu{
+position:absolute;
+left:500px;
+top:280px;
+width:200px;
+height:200px;
+background:black;
+ 
+}
+ 
+</style>
+</head>
+ 
+<body>
+<div id="kutu"></div>
+ 
+ 
+<script>
+var kutu=document.getElementById("kutu");
+ 
+ 
+window.onkeydown=function(olay){
+ 
+var y=kutu.offsetTop, x=kutu.offsetLeft;
+ 
+//Sol Top Kodu:37 Ust Top Kodu:38 Sağ Top Kodu:39 Alt Top Kodu:40*/
+ 
+if(olay.keyCode==37)
+{
+kutu.style.left=(x-5)+"px";
+}
+else if(olay.keyCode==38)
+{
+kutu.style.top=(y-5)+"px";
+}
+else if(olay.keyCode==39)
+{
+kutu.style.left=(x+5)+"px";
+}
+else if(olay.keyCode==40)
+{
+kutu.style.top=(y+5)+"px";
+}
+ 
+}
+ 
+</script>
+
+</body>
+</html>
